@@ -2,7 +2,8 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js" lang=""> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -18,8 +19,12 @@
 
   <link rel="stylesheet" href="{{ URL_ROOT }}/static/yaksh/css/yakshcustom.css" type="text/css" />
   <link rel="stylesheet" href="{{ URL_ROOT }}/static/yaksh/css/animate.min.css" type="text/css" />
-  <link rel="stylesheet" href="{{ URL_ROOT }}/static/yaksh/css/font-awesome.css" type="text/css" />
   <link rel="stylesheet" href="{{ URL_ROOT }}/static/yaksh/css/ontop.css" type="text/css" />
+  <link href="{{ URL_ROOT }}/static/new/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="{{ URL_ROOT }}/static/new/css/sb-admin-2.min.css" rel="stylesheet">
 
 
   {% block meta %}
@@ -37,6 +42,19 @@
   <script language="JavaScript" type="text/javascript" src="{{ URL_ROOT }}/static/yaksh/js/jquery-3.3.1.min.js"></script>
   <script language="JavaScript" type="text/javascript" src="{{ URL_ROOT }}/static/yaksh/js/bootstrap.min.js"></script>
   <script language="JavaScript" type="text/javascript" src="{{ URL_ROOT }}/static/yaksh/js/wow.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{{ URL_ROOT }}/static/new/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{{ URL_ROOT }}/static/new/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="{{ URL_ROOT }}/static/new/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="{{ URL_ROOT }}/static/new/js/demo/chart-area-demo.js"></script>
+    <script src="{{ URL_ROOT }}/static/new/js/demo/chart-pie-demo.js"></script>
  
   <script>
       new WOW().init();
@@ -46,7 +64,7 @@
   </script>
 </head>
 
-<body {% block onload %} {% endblock %} class="yaksh">
+<body {% block onload %} {% endblock %} id="page-top">
 
   <div id="ontop">
     <div id="state">
@@ -57,6 +75,7 @@
   
   {% block nav %}
   {% endblock %}
+
 
      <div class="content">
          <div class="header">

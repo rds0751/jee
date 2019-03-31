@@ -23,12 +23,12 @@ OUTPUT_DIR = os.path.join(BASE_DIR, "yaksh_data", "output")
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY', default='dUmMy_s3cR3t_k3y')
+SECRET_KEY = config('SECRKhEEY', default='dUmMy_s3cR3t_k3y')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 URL_ROOT = ''
 

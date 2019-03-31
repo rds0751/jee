@@ -17,7 +17,6 @@ import json
 from multiprocessing import Process, Queue, Manager
 import os
 from os.path import dirname, abspath
-import pwd
 import sys
 import time
 
@@ -30,6 +29,15 @@ from six.moves import urllib
 # Local imports
 from .settings import N_CODE_SERVERS, SERVER_POOL_PORT
 from .grader import Grader
+
+
+if os.name == 'nt':
+    class Pwd():
+        def getpwnam(self, user):
+            pass
+    pwd = Pwd()
+else:
+    import pwd
 
 
 MY_DIR = abspath(dirname(__file__))

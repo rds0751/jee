@@ -1,16 +1,7 @@
 {% extends "base.html" %}
 
 {% block nav %} 
-<div class="container-fluid yakshnav">
-  <nav class="navbar fixed-top navbar-expand-lg yakshheading yakshnav">
-    <div class="container">
-      <a class="navbar-brand">
-          <img src="{{ URL_ROOT }}/static/yaksh/images/yaksh_banner.png" alt="YAKSH">
-          </img>
-       </a>
-    </div><!-- /.container -->
-  </nav><!-- /.navbar -->
-</div>
+
 {% endblock %}
 
 {% block content %}
@@ -20,7 +11,7 @@
     <table class="table table-bordered table-responsive-sm" >
         <thead>
             <tr class="yakshred text-center">
-                <th> Question</th>
+                <th> Question </th>
                 <th> Status </th>
             </tr>
         </thead>
@@ -57,4 +48,5 @@
         <button class="btn btn-outline-danger" type="button" name="no" onClick="window.location='{{ URL_ROOT }}/exam/start/{{ paper.attempt_number }}/{{module_id}}/{{ paper.question_paper.id }}/{{course_id}}'">No!</button>
     </center>
 	</form>
+<br><br><br>
 {% endblock content %}

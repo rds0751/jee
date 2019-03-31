@@ -30,7 +30,7 @@ question_types = (
     ("select", "Select Question Type"),
     ("mcq", "Multiple Choice"),
     ("mcc", "Multiple Correct Choices"),
-    ("code", "Code"),
+    ("text", "Textarea"),
     ("upload", "Assignment Upload"),
     ("integer", "Answer in Integer"),
     ("string", "Answer in String"),

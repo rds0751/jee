@@ -51,7 +51,7 @@ languages = (
 question_types = (
         ("mcq", "Single Correct Choice"),
         ("mcc", "Multiple Correct Choices"),
-        ("code", "Code"),
+        ("text", "Textarea"),
         ("upload", "Assignment Upload"),
         ("integer", "Answer in Integer"),
         ("string", "Answer in String"),

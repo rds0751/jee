@@ -18,21 +18,21 @@
 <form action="{{ URL_ROOT }}/exam/manage/addquestion/{{ question.id }}/" method="post" name=frm onSubmit="return autosubmit();" enctype="multipart/form-data">
   {% csrf_token %}
   <center><table class="table table-responsive-sm">
-  <tr><td>Summary: <td>{{ qform.summary }}{{ qform.summary.errors }}
-  <tr><td> Language: <td> {{qform.language}}{{qform.language.errors}}
+  <tr><td> Summary: <td>{{ qform.summary }}{{ qform.summary.errors }}
+  <tr><td> Subject: <td> {{qform.language}}{{qform.language.errors}}
   <tr><td> Type: <td> {{ qform.type }}{{qform.type.errors}}
-  <tr><td>Points:<td><button class="btn-mini" type="button" onClick="increase(frm);">+</button>{{qform.points }}<button class="btn-mini" type="button" onClick="decrease(frm);">-</button>{{ qform.points.errors }} 
-    <tr><td><strong>Rendered: </strong><td><p id='my'></p>
-  <tr><td>Description: <td>{{ qform.description}}  {{qform.description.errors}}
-  <tr><td>Tags: <td>{{ qform.tags }}
-  <tr><td><strong>Rendered Solution: </strong><td><p id='rend_solution'></p>
-  <tr><td>Solution: <td>{{ qform.solution }}
-  <tr><td>Snippet: <td>{{ qform.snippet }}
-  <tr><td>Minimum Time(in minutes):<td> {{ qform.min_time }}
-  <tr><td>Partial Grading: <td>{{ qform.partial_grading }}
-  <tr><td>Grade Assignment Upload:<td> {{ qform.grade_assignment_upload }}
+  <tr><td> Points: <td><button class="btn-mini" type="button" onClick="increase(frm);">+</button>{{qform.points }}<button class="btn-mini" type="button" onClick="decrease(frm);">-</button>{{ qform.points.errors }} 
+    <tr><td><strong> Rendered: </strong><td><p id='my'></p>
+  <tr><td> Description: <td>{{ qform.description}}  {{qform.description.errors}}
+  <tr><td> Tags: <td>{{ qform.tags }}
+  <tr><td><strong> Rendered Solution: </strong><td><p id='rend_solution'></p>
+  <tr><td> Solution: <td>{{ qform.solution }}
+  <tr><td> Snippet: <td>{{ qform.snippet }}
+  <tr><td> Minimum Time(in minutes):<td> {{ qform.min_time }}
+  <tr><td> Partial Grading: <td>{{ qform.partial_grading }}
+  <tr><td> Grade Assignment Upload: <td> {{ qform.grade_assignment_upload }}
   <tr><td> File: <td> {{ fileform.file_field }}{{ fileform.file_field.errors }}
-  {% if uploaded_files %}<br><b>Uploaded files:</b><br>Check on delete to delete files,
+  {% if uploaded_files %}<br><b> Uploaded files: </b><br>Check on delete to delete files,
   extract to extract files and hide to hide files from student(if required)<br>
   {% for file in uploaded_files %}
   <input type="checkbox" name="clear" value="{{file.id}}">&nbsp;delete</input>&nbsp;
@@ -56,16 +56,16 @@
 
   </div>
   {% endfor %}
-  <p><label for="case_type">Add Test Case:</label> <select id="case_type" name="case_type" onchange="frm.submit()">
+  <p><label for="case_type"> Add Test Case: </label> <select id="case_type" name="case_type" onchange="frm.submit()">
       <option value="" selected="selected">---------</option>
-      <option value="standardtestcase">Standard </option>
-      <option value="stdiobasedtestcase">StdIO </option>
-      <option value="mcqtestcase">MCQ/MCC </option>
-      <option value="hooktestcase">Hook </option>
-      <option value="integertestcase">Integer </option>
+      <option value="standardtestcase"> Standard </option>
+      <option value="stdiobasedtestcase"> StdIO </option>
+      <option value="mcqtestcase"> MCQ/MCC </option>
+      <option value="hooktestcase"> Hook </option>
+      <option value="integertestcase"> Integer </option>
       <option value="stringtestcase"> String </option>
       <option value="floattestcase"> Float </option>
-      <option value="arrangetestcase">Arrange options </option>
+      <option value="arrangetestcase"> Arrange options </option>
   </select></p>
   <center>
     <button class="btn btn-success" type="submit" name="save_question">Save</button>
