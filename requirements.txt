@@ -1,3 +1,4 @@
 -r requirements/requirements-common.txt
 
 gunicorn
+dj-static==0.0.6
