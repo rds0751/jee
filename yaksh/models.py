@@ -1499,7 +1499,7 @@ class QuestionPaper(models.Model):
     fixed_questions = models.ManyToManyField(Question)
 
     # Questions that will be fetched randomly from the Question Set.
-    random_questions = models.ManyToManyField("QuestionSet")
+    random_questions = models.ManyToManyField("QuestionSet", null=True, blank=True)
 
     # Option to shuffle questions, each time a new question paper is created.
     shuffle_questions = models.BooleanField(default=False, blank=False)
