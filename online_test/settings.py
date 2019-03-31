@@ -64,25 +64,15 @@ ROOT_URLCONF = 'online_test.urls'
 WSGI_APPLICATION = 'online_test.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/1.6/ref/settings/#databases
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.{0}'.format(
-            config('DB_ENGINE', default='sqlite3')
-        ),
-        'NAME': config('DB_NAME',
-                       default=os.path.join(BASE_DIR, 'db.sqlite3')
-                       ),
-        # The following settings are not used with sqlite3:
-        'USER': config('DB_USER', default=''),
-        'PASSWORD': config('DB_PASSWORD', default=''),
-        # Empty for localhost through domain sockets or '1$
-        'HOST': config('DB_HOST', default='localhost'),
-        'PORT': config('DB_PORT', default=''),
-    },
-}
+import dj_database_url
 
+DATABASES = {
+    'default': dj_database_url.config(
+        default='postgres://jsuvemhgmepixk:7772dcf9e9c79bbede0d3ae55b9dce04f811e73c7932f6961361a3caffd3f5f5@ec2-54-225-89-195.compute-1.amazonaws.com:5432/dfvh91fatt7dku',
+        conn_max_age=600)}
+
+
+    
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 LANGUAGE_CODE = 'en-us'
