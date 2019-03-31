@@ -26,7 +26,7 @@ OUTPUT_DIR = os.path.join(BASE_DIR, "yaksh_data", "output")
 SECRET_KEY = config('SECRKhEEY', default='dUmMy_s3cR3t_k3y')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -72,7 +72,7 @@ DATABASES = {
         conn_max_age=600)}
 
 
-    
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 LANGUAGE_CODE = 'en-us'
