@@ -46,16 +46,22 @@ languages = (
         ("cpp", "C++ Language"),
         ("java", "Java Language"),
         ("scilab", "Scilab"),
+        ("english", "English"),
+        ("physics", "Physics"),
+        ("chemistry","Chemistry"),
+        ("maths","Mathematics"),
+        ("biology","Biology"),
+        ("machineLearning","Machine Learning")
     )
 
 question_types = (
         ("mcq", "Single Correct Choice"),
         ("mcc", "Multiple Correct Choices"),
-        ("text", "Textarea"),
+        ("text", "Text Area"),
         ("upload", "Assignment Upload"),
         ("integer", "Answer in Integer"),
         ("string", "Answer in String"),
-        ("float", "Answer in Float"),
+        ("float", "Answer in Decimals"),
         ("arrange", "Arrange in Correct Order"),
 
     )
