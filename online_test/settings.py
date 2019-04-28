@@ -19,9 +19,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # code server with each user having their own sub-directory.
 OUTPUT_DIR = os.path.join(BASE_DIR, "yaksh_data", "output")
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRKhEEY', default='dUmMy_s3cR3t_k3y')
 
@@ -68,7 +65,7 @@ import dj_database_url
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgres://vvoimwmboindeq:af273ce932426835498d7db7165304bcd9787404df4097e2f2bf4d78970e49c0@ec2-50-17-246-114.compute-1.amazonaws.com:5432/d4oq1s2lna334j',
+        default='postgres://qnznmjwhmgnqyc:e14447548d7069eb0def60e5e10529a2ad7b670456e68226d29a65b913d68b3a@ec2-54-83-205-27.compute-1.amazonaws.com:5432/d1q9rf8mbbdj2u',
         conn_max_age=600)}
 
 
