@@ -7,6 +7,7 @@ from ruamel.yaml.scalarstring import PreservedScalarString
 from ruamel.yaml.comments import CommentedMap
 from random import sample
 from collections import Counter, defaultdict
+from ckeditor_uploader.fields import RichTextUploadingField
 
 from django.db import models
 from django.contrib.auth.models import User, Group, Permission
@@ -1146,7 +1147,7 @@ class Question(models.Model):
     summary = models.CharField(max_length=256)
 
     # The question text, should be valid HTML.
-    description = models.TextField()
+    description = RichTextUploadingField()
 
     # Number of points for the question.
     points = models.FloatField(default=1.0)
@@ -1180,7 +1181,7 @@ class Question(models.Model):
     min_time = models.IntegerField("time in minutes", default=0)
 
     # Solution for the question.
-    solution = models.TextField(blank=True)
+    solution = RichTextUploadingField()
 
     def consolidate_answer_data(self, user_answer, user=None):
         question_data = {}
@@ -1505,7 +1506,7 @@ class QuestionPaper(models.Model):
     fixed_questions = models.ManyToManyField(Question)
 
     # Questions that will be fetched randomly from the Question Set.
-    random_questions = models.ManyToManyField("QuestionSet", null=True, blank=True)
+    random_questions = models.ManyToManyField("QuestionSet", blank=True)
 
     # Option to shuffle questions, each time a new question paper is created.
     shuffle_questions = models.BooleanField(default=False, blank=False)

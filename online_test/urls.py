@@ -17,5 +17,6 @@ urlpatterns = [
     url(r'^', include('social.apps.django_app.urls', namespace='social')),
     url(r'^grades/', include('grades.urls', namespace='grades',
                              app_name='grades')),
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

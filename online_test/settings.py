@@ -23,7 +23,7 @@ OUTPUT_DIR = os.path.join(BASE_DIR, "yaksh_data", "output")
 SECRET_KEY = config('SECRKhEEY', default='dUmMy_s3cR3t_k3y')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -42,6 +42,8 @@ INSTALLED_APPS = (
     'taggit',
     'social.apps.django_app.default',
     'grades',
+    'ckeditor',
+    'ckeditor_uploader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -69,6 +71,16 @@ DATABASES = {
         conn_max_age=600)}
 
 
+CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+ 
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_IMAGE_BACKEND = "pillow"
+ 
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': None,
+    },
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/

@@ -17,13 +17,18 @@ import pytz
 from .send_emails import generate_activation_key
 
 languages = (
-    ("select", "Select Language"),
-    ("python", "Python"),
-    ("bash", "Bash"),
-    ("c", "C Language"),
-    ("cpp", "C++ Language"),
-    ("java", "Java Language"),
-    ("scilab", "Scilab"),
+        ("python", "Python"),
+        ("bash", "Bash"),
+        ("c", "C Language"),
+        ("cpp", "C++ Language"),
+        ("java", "Java Language"),
+        ("scilab", "Scilab"),
+        ("english", "English"),
+        ("physics", "Physics"),
+        ("chemistry","Chemistry"),
+        ("maths","Mathematics"),
+        ("biology","Biology"),
+        ("machineLearning","Machine Learning"),
 )
 
 question_types = (
@@ -33,8 +38,8 @@ question_types = (
     ("text", "Textarea"),
     ("upload", "Assignment Upload"),
     ("integer", "Answer in Integer"),
-    ("string", "Answer in String"),
-    ("float", "Answer in Float"),
+    ("string", "Answer in a Word"),
+    ("float", "Answer in Decimal"),
     ("arrange", "Arrange in Correct Order"),
 )
 
